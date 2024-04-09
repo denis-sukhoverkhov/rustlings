@@ -13,10 +13,19 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
+const bulk_amount: u32 = 41;
 
-// Put your function here!
-// fn calculate_price_of_apples {
+fn calculate_price_of_apples(amount: u32) -> u32 {
+    let retail_price = 2;
+    let bulk_price = 1;
+
+    let mut result_price = retail_price;
+    if amount >= bulk_amount {
+        result_price = bulk_price;
+    }
+
+    amount * result_price
+}
 
 // Don't modify this function!
 #[test]
